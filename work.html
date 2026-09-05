@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Impact - YCBN | Youth Capacity Building Network</title>
+    <meta name="description" content="Discover the impact YCBN is making through sustainable WASH infrastructure and youth empowerment programs in Uganda. Real stories of change.">
+    <link rel="canonical" href="https://ycbn.org/work.html">
+    <link rel="icon" href="resources/logo.jpeg" type="image/jpeg">
+    <meta property="og:url" content="https://ycbn.org/work.html">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ycbn-blue': '#0ea5e9',
+                        'ycbn-blue-dark': '#0284c7',
+                        'ycbn-teal': '#14b8a6',
+                        'ycbn-teal-dark': '#0d9488',
+                        'ycbn-orange': '#f97316',
+                        'ycbn-orange-light': '#fb923c',
+                        'ycbn-purple': '#8b5cf6',
+                        'ycbn-pink': '#ec4899',
+                        'ycbn-dark': '#0f172a',
+                        'ycbn-gray': '#f1f5f9',
+                        'ycbn-text': '#64748b'
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'opensans': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+
+        .top-bar {
+            background: linear-gradient(90deg, #0ea5e9 0%, #14b8a6 100%);
+            color: white;
+            font-size: 13px;
+        }
+
+        .main-nav {
+            background-color: rgba(255,255,255,0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-link {
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: #0f172a;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after { width: 100%; }
+        .nav-link:hover { color: #0ea5e9; }
+        .nav-link.active { color: #0ea5e9; }
+        .nav-link.active::after { width: 100%; }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .sticky-header.scrolled {
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+
+        .dropdown-menu {
+            background-color: white;
+            border-top: 3px solid #0ea5e9;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .dropdown-item {
+            color: #0f172a;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 14px 24px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            color: #0ea5e9;
+            background-color: #f8fafc;
+            padding-left: 30px;
+        }
+
+        .btn-ycbn {
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+            color: white;
+            padding: 14px 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-ycbn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(14,165,233,0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #0ea5e9;
+            padding: 12px 32px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #0ea5e9;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: #0ea5e9;
+            color: white;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 20px;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #0ea5e9, #14b8a6);
+        }
+
+        .section-title-center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .counter-number {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 56px;
+            line-height: 1;
+            color: white;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .footer-main {
+            background-color: #0f172a;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(14,165,233,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(20,184,166,0.1) 0%, transparent 50%);
+            color: white;
+        }
+
+        .footer-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .footer-link {
+            color: rgba(255,255,255,0.7);
+            transition: all 0.3s ease;
+            display: block;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer-link:hover {
+            color: #0ea5e9;
+            padding-left: 10px;
+        }
+
+        .newsletter-section {
+            background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu {
+            background-color: #0f172a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .pdf-card {
+            transition: all 0.3s ease;
+        }
+        .pdf-card:hover {
+            transform: translateY(-4px);
+        }
+        .pdf-card .pdf-icon {
+            transition: transform 0.3s ease;
+        }
+        .pdf-card:hover .pdf-icon {
+            transform: scale(1.1);
+        }
+    </style>
+    <link rel="stylesheet" href="resources/css/ycbn.css">
+</head>
+<body class="bg-ycbn-gray antialiased">
+<!-- Top Bar -->
+    <div class="top-bar py-3">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+                <div class="flex items-center gap-6">
+                    <span class="flex items-center gap-2 font-semibold">
+                        <i class="fas fa-hand-holding-water"></i>
+                        Sustainable WASH for All
+                    </span>
+                    <a href="mailto:info@ycbn.org" class="flex items-center gap-2 hover:text-ycbn-orange transition-colors">
+                        <i class="fas fa-envelope"></i>
+                        info@ycbn.org
+                    </a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on LinkedIn"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.instagram.com/youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on Instagram"><i class="fab fa-instagram text-sm"></i></a>
+                        <a href="https://x.com/YCBNetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on X"><i class="fab fa-x-twitter text-sm"></i></a>
+                        <a href="https://youtube.com/@youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on YouTube"><i class="fab fa-youtube text-sm"></i></a>
+                        <a href="https://www.tiktok.com/@youth.capacity.bu" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-ycbn-orange transition-colors" aria-label="YCBN on TikTok"><i class="fab fa-tiktok text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav sticky-header" id="mainNav">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white">
+                        <img src="resources/logo.jpeg" alt="Youth Capacity Building Network Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <div class="font-montserrat font-bold text-lg text-ycbn-dark leading-tight">Youth Capacity<br>Building Network</div>
+                    </div>
+                </a>
+
+                <div class="hidden xl:flex items-center gap-5 2xl:gap-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <div class="relative group">
+                        <a href="about.html" class="nav-link flex items-center gap-1">
+                            Who We Are
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
+                            <div class="py-2">
+                                <a href="about.html" class="dropdown-item block">Vision &amp; Mission</a>
+                                <a href="about.html#values" class="dropdown-item block">Core Values</a>
+                                <a href="about.html#objectives" class="dropdown-item block">Objectives</a>
+                                <a href="team.html" class="dropdown-item block">Our Team</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="programmes.html" class="nav-link flex items-center gap-1">
+                            What We Do
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full left-0 w-72 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4">
+                            <div class="py-2">
+                                <a href="programs/wash/index.html" class="dropdown-item block">WASH</a>
+                                <a href="programs/digital-skills/index.html" class="dropdown-item block">Digital Skills</a>
+                                <a href="programs/innovation/index.html" class="dropdown-item block">Innovation &amp; Entrepreneurship</a>
+                                <a href="programs/environment/index.html" class="dropdown-item block">Environment &amp; Waste</a>
+                                <a href="programs/youth-empowerment/index.html" class="dropdown-item block">Youth Empowerment</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="work.html" class="nav-link text-ycbn-blue">Our Work</a>
+                    <a href="stories.html" class="nav-link">News</a>
+                    <a href="volunteer.html" class="nav-link">Volunteer</a>
+                    <a href="partnerships.html" class="nav-link">Partners</a>
+                    <a href="donate.html" class="nav-link">Support</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <a href="contact.html" class="hidden xl:inline-flex btn-ycbn">
+                    <span>Get Involved</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <button id="mobileMenuBtn" class="xl:hidden text-2xl text-ycbn-dark p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu hidden xl:hidden absolute top-full left-0 w-full">
+            <div class="container mx-auto px-4 py-6">
+                <a href="index.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Home</a>
+                <a href="about.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Who We Are</a>
+                <a href="programmes.html" class="block py-3 text-white border-b border-gray-700 font-semibold">What We Do</a>
+                <a href="work.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Our Work</a>
+                <a href="team.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Our Team</a>
+                <a href="stories.html" class="block py-3 text-white border-b border-gray-700 font-semibold">News</a>
+                <a href="volunteer.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Volunteer</a>
+                <a href="partnerships.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Partnerships</a>
+                <a href="donate.html" class="block py-3 text-white border-b border-gray-700 font-semibold">Support</a>
+                <a href="contact.html" class="block py-3 text-ycbn-blue font-bold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="relative bg-ycbn-dark py-32 md:py-40 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('resources/new-1.jpeg')] bg-cover bg-center opacity-50"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-ycbn-dark via-ycbn-dark/80 to-transparent"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block px-4 py-2 bg-ycbn-blue/20 border border-ycbn-blue/40 rounded-full text-ycbn-blue text-sm font-semibold mb-6 tracking-wider uppercase">
+                    Real Stories, Real Change
+                </span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 font-montserrat">Our Impact</h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-ycbn-blue to-ycbn-teal mb-6"></div>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
+                    Discover how YCBN is transforming lives through sustainable WASH infrastructure and youth empowerment programs across Uganda.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats Section -->
+    <section class="stats-section py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-bold text-3xl text-white uppercase mb-4">Our Growing Impact</h2>
+                <p class="text-white/80">Since our establishment in 2025</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <!-- Descriptive tiles only - verified impact figures will be published
+                     once official records and project reports confirm them. -->
+                <div class="p-6">
+                    <div class="counter-number mb-2 text-xl md:text-2xl font-bold text-white/90">Est. 2025</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">A Youth-Led Organization</p>
+                </div>
+                <div class="p-6">
+                    <div class="counter-number mb-2 text-xl md:text-2xl font-bold text-white/90">WASH</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Hygiene & Menstrual Health Focus</p>
+                </div>
+                <div class="p-6">
+                    <div class="counter-number mb-2 text-xl md:text-2xl font-bold text-white/90">Digital</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Skills & Youth Innovation Focus</p>
+                </div>
+                <div class="p-6">
+                    <div class="counter-number mb-2 text-xl md:text-2xl font-bold text-white/90">Reports</div>
+                    <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Published on This Page</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <p class="text-white/90 text-lg max-w-2xl mx-auto">We publish verified information and real reports. Specific impact figures will be shared once official records confirm them.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documented Activities -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title section-title-center mb-4">Documented Activities &amp; Updates</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Recent activities, events and engagements that YCBN has organised or participated in. These are based on published flyers and reports available on this page.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Update 1: Mensural Hygiene Day -->
+                <div class="story-card">
+                    <img src="resources/International Menstrual.jpeg" alt="International Menstrual Hygiene Day 2026 celebrations flyer" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">May 29, 2026 &bull; Event &bull; Kira, Wakiso</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Post International Menstrual Health &amp; Hygiene Management Day</h3>
+                        <p class="text-gray-600 mb-4">YCBN joined youth-led and community organisations for the Post International Menstrual Health &amp; Hygiene Management Day celebrations at Kira Senior Secondary School, promoting dignity, breaking stigma and empowering girls through education and collective action.</p>
+                        <a href="resources/menstrual_hygiene_day_2026.pdf" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Report <i class="fas fa-file-pdf ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Update 2: Webinar -->
+                <div class="story-card">
+                    <img src="resources/Reinventing NGOs through Technology.jpeg" alt="Reinventing NGOs through Technology webinar flyer" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-orange text-sm font-semibold mb-2">May 24, 2026 &bull; Webinar</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Reinventing NGOs through Technology, AI &amp; Digital Fundraising</h3>
+                        <p class="text-gray-600 mb-4">A Google Meet discussion hosted by YCBN exploring how organisations can use technology, AI and digital fundraising to strengthen their work. Host: Frank Mwanje, with guests from Zimbabwe and Zambia.</p>
+                        <a href="stories.html" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Update 3: Beyond Donor Funding -->
+                <div class="story-card">
+                    <img src="resources/news-1.jpeg" alt="Beyond Donor Funding engagement session flyer" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-teal text-sm font-semibold mb-2">May 2, 2026 &bull; Engagement Session</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Beyond Donor Funding: Sustaining Indigenous Organizations</h3>
+                        <p class="text-gray-600 mb-4">YCBN hosted an engagement session exploring how communities can sustain their own organisations through local resource mobilisation, income-generating initiatives, community ownership, partnerships and stronger governance.</p>
+                        <a href="stories.html" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Update 4: IWD -->
+                <div class="story-card">
+                    <img src="resources/supporting.jpeg" alt="International Women's Day outreach activity" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <div class="text-ycbn-blue text-sm font-semibold mb-2">March 2026 &bull; Outreach &bull; Princess Diana High School</div>
+                        <h3 class="text-2xl font-bold text-ycbn-dark mb-3">Pre-International Women's Day Outreach</h3>
+                        <p class="text-gray-600 mb-4">As part of 2026 International Women's Day activities, YCBN carried out outreach at Princess Diana High School, including mentorship and menstrual health education. A full report is available.</p>
+                        <a href="resources/iwd_report_2026.pdf" target="_blank" rel="noopener" class="inline-flex items-center text-ycbn-blue font-semibold hover:text-ycbn-teal transition-colors">
+                            View Report <i class="fas fa-file-pdf ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PDF RESOURCES SECTION - ALL 4 REPORTS -->
+    <!-- ============================================================ -->
+    <section class="py-24 bg-ycbn-gray">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="section-title section-title-center mb-4">Our Reports & Resources</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Access our detailed activity reports and official documentation from recent events and engagements.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- PDF 1: Menstrual Hygiene Day -->
+                <div class="pdf-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="pdf-icon w-14 h-14 rounded-xl bg-ycbn-blue/10 flex items-center justify-center text-ycbn-blue flex-shrink-0">
+                                <i class="fas fa-file-pdf text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-ycbn-dark text-base leading-tight">Menstrual Hygiene Day</h3>
+                                <div class="flex items-center gap-3 mt-1">
+                                    <span class="inline-flex items-center text-xs text-gray-500">
+                                        <i class="far fa-calendar-alt mr-1.5"></i>
+                                        May 2026
+                                    </span>
+                                    <span class="inline-flex items-center text-xs text-gray-500">
+                                        <i class="far fa-file mr-1.5"></i>
+                                        7 Pages
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
+                            Post International Menstrual Health and Hygiene Management Day Celebrations at Kira Secondary School.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-2.5">
+                            <a href="resources/menstrual_hygiene_day_2026.pdf" 
+                               target="_blank" 
+                               class="flex-1 btn-ycbn justify-center text-center rounded-lg py-2.5 px-3 text-xs">
+                                <i class="fas fa-eye mr-1.5"></i> View PDF
+                            </a>
+                            <a href="resources/menstrual_hygiene_day_2026.pdf" 
+                               download 
+                               class="px-4 py-2.5 rounded-lg border-2 border-ycbn-blue text-ycbn-blue hover:bg-ycbn-blue hover:text-white transition-all font-semibold text-xs flex items-center justify-center gap-2 whitespace-nowrap">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PDF 2: International Women's Day -->
+                <div class="pdf-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="pdf-icon w-14 h-14 rounded-xl bg-ycbn-orange/10 flex items-center justify-center text-ycbn-orange flex-shrink-0">
+                                <i class="fas fa-file-pdf text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-ycbn-dark text-base leading-tight">International Women's Day</h3>
+                                <div class="flex items-center gap-3 mt-1">
+                                    <span class="inline-flex items-center text-xs text-gray-500">
+                                        <i class="far fa-calendar-alt mr-1.5"></i>
+                                        March 2026
+                                    </span>
+                                    <span class="inline-flex items-center text-xs text-gray-500">
+                                        <i class="far fa-file mr-1.5"></i>
+                                        7 Pages
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
+                            Pre-International Women's Day outreach at Princess Diana High School, including mentorship and menstrual health education.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-2.5">
+                            <a href="resources/iwd_report_2026.pdf" 
+                               target="_blank" 
+                               class="flex-1 btn-ycbn justify-center text-center rounded-lg py-2.5 px-3 text-xs">
+                                <i class="fas fa-eye mr-1.5"></i> View PDF
+                            </a>
+                            <a href="resources/iwd_report_2026.pdf" 
+                               download 
+                               class="px-4 py-2.5 rounded-lg border-2 border-ycbn-blue text-ycbn-blue hover:bg-ycbn-blue hover:text-white transition-all font-semibold text-xs flex items-center justify-center gap-2 whitespace-nowrap">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PDF 3: CEHURD Engagement -->
+                <div class="pdf-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="pdf-icon w-14 h-14 rounded-xl bg-ycbn-purple/10 flex items-center justify-center text-ycbn-purple flex-shrink-0">
+                                <i class="fas fa-file-pdf text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-ycbn-dark text-base leading-tight">CEHURD Engagement</h3>
+                                <div class="flex items-center gap-3 mt-1">
+                                    <span class="inline-flex items-center text-xs text-gray-500">
+                                        <i class="far fa-calendar-alt mr-1.5"></i>
+                                        April 2026
+                                    </span>
+                                    <span class="inline-flex items-center text-xs text-gray-500">
+                                        <i class="far fa-file mr-1.5"></i>
+                                        5 Pages
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
+                            High-level engagement with CEHURD's Deputy Executive Director on organizational mentorship and grant opportunities.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-2.5">
+                            <a href="resources/ycbn_cehurd_engagement_2026.pdf" 
+                               target="_blank" 
+                               class="flex-1 btn-ycbn justify-center text-center rounded-lg py-2.5 px-3 text-xs">
+                                <i class="fas fa-eye mr-1.5"></i> View PDF
+                            </a>
+                            <a href="resources/ycbn_cehurd_engagement_2026.pdf" 
+                               download 
+                               class="px-4 py-2.5 rounded-lg border-2 border-ycbn-blue text-ycbn-blue hover:bg-ycbn-blue hover:text-white transition-all font-semibold text-xs flex items-center justify-center gap-2 whitespace-nowrap">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PDF 4: Red Cross Engagement -->
+                <div class="pdf-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="pdf-icon w-14 h-14 rounded-xl bg-ycbn-pink/10 flex items-center justify-center text-ycbn-pink flex-shrink-0">
+                                <i class="fas fa-file-pdf text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-ycbn-dark text-base leading-tight">Red Cross Engagement</h3>
+                                <div class="flex items-center gap-3 mt-1">
+                                    <span class="inline-flex items-center text-xs text-gray-500">
+                                        <i class="far fa-calendar-alt mr-1.5"></i>
+                                        March 2026
+                                    </span>
+                                    <span class="inline-flex items-center text-xs text-gray-500">
+                                        <i class="far fa-file mr-1.5"></i>
+                                        7 Pages
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2">
+                            Strategic engagement with Uganda Red Cross Society on WASH collaboration and youth partnership opportunities.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-2.5">
+                            <a href="resources/ycbn_red_cross_engagement_2026.pdf" 
+                               target="_blank" 
+                               class="flex-1 btn-ycbn justify-center text-center rounded-lg py-2.5 px-3 text-xs">
+                                <i class="fas fa-eye mr-1.5"></i> View PDF
+                            </a>
+                            <a href="resources/ycbn_red_cross_engagement_2026.pdf" 
+                               download 
+                               class="px-4 py-2.5 rounded-lg border-2 border-ycbn-blue text-ycbn-blue hover:bg-ycbn-blue hover:text-white transition-all font-semibold text-xs flex items-center justify-center gap-2 whitespace-nowrap">
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Info Note -->
+            <div class="text-center mt-12">
+                <p class="text-sm text-gray-500 max-w-2xl mx-auto">
+                    <i class="fas fa-info-circle text-ycbn-blue mr-2"></i>
+                    All reports are in PDF format. Click "View PDF" to open in a new tab or "Download" to save to your device.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-24 bg-gradient-to-r from-ycbn-blue to-ycbn-teal text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block px-4 py-2 bg-white/20 border border-white/40 rounded-full text-white text-sm font-semibold mb-6 tracking-wider uppercase">
+                Be Part of the Change
+            </span>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto">Help Us Create More Stories of Hope</h2>
+            <p class="text-xl opacity-90 max-w-3xl mx-auto mb-10">
+                Your support helps us reach more communities, train more youth, and create lasting impact. Join us in building a better Uganda.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="donate.html" class="bg-white text-ycbn-blue px-8 py-4 rounded-lg font-bold text-lg hover:bg-ycbn-dark hover:text-white transition-all shadow-xl">
+                    Donate Now
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-ycbn-blue transition-all">
+                    Partner With Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter & Footer -->
+    <section class="newsletter-section py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-montserrat font-bold text-3xl text-white mb-6">Get In Touch</h2>
+                    <p class="text-gray-400 mb-8">Ready to partner with us or want to learn more about our work? Reach out today.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-ycbn-blue flex-shrink-0"><i class="fas fa-location-dot"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Address</h4>
+                                <p class="text-gray-400 text-sm">P.O Box 117751, Wakiso, Uganda</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-ycbn-teal flex-shrink-0"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1">Email</h4>
+                                <p class="text-gray-400 text-sm">info@ycbn.org</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+                    <h3 class="font-montserrat font-bold text-xl text-white mb-6">Subscribe to Our Newsletter</h3>
+                    <p class="text-gray-400 text-sm mb-6">Stay updated with our latest projects, impact stories, and opportunities.</p>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Your Name" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email Address" class="w-full px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-ycbn-blue transition-colors">
+                        </div>
+                        <a href="mailto:info@ycbn.org?subject=Newsletter%20Subscription%20-%20YCBN&body=Hello%20YCBN%2C%20I%20would%20like%20to%20subscribe%20to%20your%20newsletter." class="w-full btn-ycbn justify-center no-underline"><span>Subscribe by Email</span><i class="fas fa-paper-plane"></i></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main pt-20 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-1">
+                    <div class="w-12 h-12 rounded-lg overflow-hidden flex items-center justify-center bg-white mb-6">
+                        <img src="resources/logo.jpeg" alt="Youth Capacity Building Network Logo" class="w-full h-full object-contain">
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Youth Capacity Building Network (YCBN) is a youth-led organisation working with young people, communities and schools to deliver WASH, digital skills, innovation, entrepreneurship and community development programmes in Uganda.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/profile.php?id=61579627535321" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.linkedin.com/company/tiny-bit-wiser/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on LinkedIn"><i class="fab fa-linkedin-in text-sm"></i></a>
+                        <a href="https://www.instagram.com/youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on Instagram"><i class="fab fa-instagram text-sm"></i></a>
+                        <a href="https://x.com/YCBNetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on X"><i class="fab fa-x-twitter text-sm"></i></a>
+                        <a href="https://youtube.com/@youthcapacitybuildingnetwork" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on YouTube"><i class="fab fa-youtube text-sm"></i></a>
+                        <a href="https://www.tiktok.com/@youth.capacity.bu" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-white/10 flex items-center justify-center hover:bg-ycbn-blue transition-colors text-white" aria-label="YCBN on TikTok"><i class="fab fa-tiktok text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <nav class="flex flex-col">
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="about.html" class="footer-link">About YCBN</a>
+                        <a href="programmes.html" class="footer-link">Our Programmes</a>
+                        <a href="work.html" class="footer-link">Our Work</a>
+                        <a href="stories.html" class="footer-link">News &amp; Updates</a>
+                        <a href="volunteer.html" class="footer-link">Volunteer</a>
+                        <a href="partnerships.html" class="footer-link">Partnerships</a>
+                        <a href="transparency.html" class="footer-link">Transparency &amp; Legal Info</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Programmes</h4>
+                    <nav class="flex flex-col">
+                        <a href="programs/wash/index.html" class="footer-link">WASH</a>
+                        <a href="programs/youth-empowerment/index.html" class="footer-link">Youth Empowerment</a>
+                        <a href="programs/digital-skills/index.html" class="footer-link">Digital Skills</a>
+                        <a href="programs/innovation/index.html" class="footer-link">Innovation &amp; Entrepreneurship</a>
+                        <a href="programs/environment/index.html" class="footer-link">Environment &amp; Waste Management</a>
+                        <a href="donate.html" class="footer-link">Support</a>
+                    </nav>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact &amp; Policies</h4>
+                    <p class="text-gray-400 text-sm mb-2">P.O Box 117751, Wakiso, Uganda</p>
+                    <p class="text-gray-400 text-sm">
+                        <strong>Email:</strong><br>
+                        <a href="mailto:info@ycbn.org" class="footer-link">info@ycbn.org</a>
+                    </p>
+                    <nav class="flex flex-col mt-4 space-y-2">
+                        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                        <a href="terms.html" class="footer-link">Terms of Use</a>
+                        <a href="safeguarding.html" class="footer-link">Safeguarding</a>
+                        <a href="complaints.html" class="footer-link">Complaints &amp; Feedback</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 text-sm">&copy; <span id="year">2026</span> Youth Capacity Building Network (YCBN). All rights reserved.</p>
+                    <div class="flex gap-4 flex-wrap justify-center">
+                        <a href="privacy.html" class="text-gray-400 hover:text-ycbn-blue text-sm transition-colors">Privacy Policy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-ycbn-blue text-sm transition-colors">Terms of Use</a>
+                        <a href="safeguarding.html" class="text-gray-400 hover:text-ycbn-blue text-sm transition-colors">Safeguarding</a>
+                        <a href="transparency.html" class="text-gray-400 hover:text-ycbn-blue text-sm transition-colors">Organization Information</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Sticky header effect
+        const mainNav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter-number');
+        const speed = 200;
+
+        const animateCounter = (counter) => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const increment = target / speed;
+            let current = 0;
+
+            const updateCount = () => {
+                current += increment;
+                if (current < target) {
+                    counter.innerText = Math.ceil(current);
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.innerText = target + '+';
+                }
+            };
+            updateCount();
+        };
+
+        const observerOptions = { threshold: 0.5 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => observer.observe(counter));
+    </script>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/256760315494?text=Hello%20YCBN%2C%20I%20would%20like%20to%20know%20more%20about%20your%20work%20and%20how%20I%20can%20get%20involved."
+       target="_blank"
+       rel="noopener noreferrer"
+       class="whatsapp-float"
+       aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Chat with us</span>
+    </a>
+</body>
+</html>
