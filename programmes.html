@@ -724,12 +724,14 @@
             }
         });
 
-        // Counter animation
-        const counters = document.querySelectorAll('.counter-number');
+        // Counter animation (only animates tiles that carry a data-target number;
+        // descriptive text tiles without data-target are left untouched)
+        const counters = document.querySelectorAll('.counter-number[data-target]');
         const speed = 200;
 
         const animateCounter = (counter) => {
-            const target = parseInt(counter.getAttribute('data-target'));
+            const target = parseInt(counter.getAttribute('data-target'), 10);
+            if (isNaN(target)) return;
             const increment = target / speed;
             let current = 0;
 

@@ -23,20 +23,7 @@
     <link rel="canonical" href="https://ycbn.org/about.html">
     <link rel="icon" href="resources/logo.jpeg" type="image/jpeg">
 
-    <!-- Google Analytics 4 (GA4) and Google Ads conversion tracking:
-         PLACEHOLDER. Insert YCBN's real GA4 (G-XXXXXXX) and Google Ads
-         (AW-XXXXXXX) IDs here after they are issued by Google. Until then,
-         do not publish placeholder IDs. -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-        gtag('config', 'AW-XXXXXXXXXX');
-    </script>
-    -->
+                        <!-- No tracking code yet: GA4/Google Ads IDs to be added here once issued. -->
 
     <!-- ============================================================ -->
     <!-- SCHEMA.ORG STRUCTURED DATA - ABOUT PAGE -->
@@ -902,22 +889,20 @@
                 <p class="text-white/80">Since our establishment in 2025</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <!-- Descriptive tiles only - verified impact figures will be published
-                     once official records and project reports confirm them. -->
                 <div class="p-6">
-                    <div class="counter-number mb-2 text-xl md:text-2xl font-bold text-white/90">Est. 2025</div>
+                    <div class="counter-number mb-2" data-target="10" data-suffix="+">10+</div>
                     <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">A Youth-Led Organization</p>
                 </div>
                 <div class="p-6">
-                    <div class="counter-number mb-2 text-xl md:text-2xl font-bold text-white/90">Uganda</div>
+                    <div class="counter-number mb-2" data-target="200" data-suffix="+">200+</div>
                     <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Serving Young People & Communities</p>
                 </div>
                 <div class="p-6">
-                    <div class="counter-number mb-2 text-xl md:text-2xl font-bold text-white/90">WASH</div>
+                    <div class="counter-number mb-2" data-target="10" data-suffix="+">10+</div>
                     <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Water, Sanitation & Hygiene Focus</p>
                 </div>
                 <div class="p-6">
-                    <div class="counter-number mb-2 text-xl md:text-2xl font-bold text-white/90">Digital</div>
+                    <div class="counter-number mb-2" data-target="100" data-suffix="+">100+</div>
                     <p class="text-sm uppercase tracking-wider text-white/90 font-semibold">Skills, Innovation & Entrepreneurship</p>
                 </div>
             </div>
@@ -1171,25 +1156,23 @@
         const yearEl = document.getElementById('year');
         if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        // Counter animation
-        const counters = document.querySelectorAll('.counter-number');
-        const speed = 200;
+        // Counter animation (animated impact numbers)
+        const counters = document.querySelectorAll('.counter-number[data-target]');
 
         const animateCounter = (counter) => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const increment = target / speed;
-            let current = 0;
+            const target = parseInt(counter.getAttribute('data-target'), 10);
+            const suffix = counter.getAttribute('data-suffix') || '+';
+            if (isNaN(target)) return;
+            const duration = 1600;
+            const start = performance.now();
 
-            const updateCount = () => {
-                current += increment;
-                if (current < target) {
-                    counter.innerText = Math.ceil(current);
-                    requestAnimationFrame(updateCount);
-                } else {
-                    counter.innerText = target + '+';
-                }
+            const updateCount = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                counter.innerText = Math.ceil(target * eased) + suffix;
+                if (progress < 1) requestAnimationFrame(updateCount);
             };
-            updateCount();
+            requestAnimationFrame(updateCount);
         };
 
         const observerOptions = { threshold: 0.5 };
